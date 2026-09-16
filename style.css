@@ -1,0 +1,451 @@
+ * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+
+/* =========================
+   HEADER
+========================= */
+
+/* .header {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 25px 6%;
+
+    z-index: 10;
+} */
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height:90px ;
+    width: 100%;
+    background-color:rgba(255, 255, 255, 0.8);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 6%;
+    z-index: 10;
+}
+.logo {
+    color: white;
+    text-decoration: none;
+
+    font-size: 22px;
+    font-weight: bold;
+}
+.logo img {
+    width: 80px;
+    height: auto;
+    display: block;
+}
+
+.navbar {
+    display: flex;
+    gap: 30px;
+}
+
+ 
+.navbar a {
+    color:rgb(169, 139, 96);
+    text-decoration: none;
+    font-size: 16px;
+    position: relative;
+    transition: 0.2s;
+}
+
+/* Mlli nhoveriw 3la menu */
+.navbar a:hover {
+    font-size: 18px;
+}
+
+/* Khat li ta7t */
+.navbar a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+    width: 0;
+    height: 2px;
+    background-color: white;
+    transition: 0.3s;
+}
+
+/* Khat kayban mlli nhoveriw */
+.navbar a:hover::after {
+    width: 100%;
+}
+.booking-btn {
+    color: rgb(169, 139, 96);;
+    text-decoration: none;
+
+    padding: 8px 22px;
+
+    border: 1px solid rgb(169, 139, 96);;
+    
+border-radius: 30px;
+    transition: 0.7s;
+}
+
+.booking-btn:hover {
+    background-color:rgb(169, 139, 96);;
+    color: #000000;
+     border: 1px solid rgb(0, 0, 0);
+}
+
+
+/* =========================
+   HERO / ACCUEIL
+========================= */
+ 
+
+.hero {
+    min-height: 100vh;
+    background-image: url("img/I3.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+
+
+}
+/* Image plus lisible */
+
+.hero-overlay {
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    /* background: rgba(0, 0, 0, 0.35); */
+}
+
+
+/* Texte */
+.dev h1{
+    color:rgb(169, 139, 96);
+}
+.hero-content {
+    position: relative;
+    z-index: 2;
+    color: white;
+    text-align: left;
+    margin-left: 8%;
+}
+.welcome {
+    font-size: 70px;
+    margin-bottom: 0px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.hero-content h1 {
+    font-size: 70px;
+    margin-bottom: 1px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.subtitle {
+    font-size: 20px;
+    margin-bottom: 30px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+/* Bouton */
+
+.hero-btn {
+    display: inline-block;
+    padding: 14px 30px;
+    
+    border: 1px solid rgb(169, 139, 96);;
+   
+    background-color: white;
+    color:  rgb(169, 139, 96);
+    text-decoration: none;
+    border-radius: 30px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.hero-btn:hover {
+    background-color:rgb(169, 139, 96);
+    color: rgb(0, 0, 0);
+    border:1px solid rgb(0, 0, 0)
+}
+
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 768px) {
+
+    .navbar {
+        display: none;
+    }
+
+    .header {
+        padding: 20px 5%;
+    }
+
+    .hero-content h1 {
+        font-size: 45px;
+    }
+
+    .subtitle {
+        font-size: 16px;
+    }
+
+    .welcome {
+        font-size: 17px;
+    }
+}
+.hero {
+    animation: zoomImage 6s ease-in-out infinite alternate;
+}
+
+@keyframes zoomImage {
+    from {
+        background-size: 100%;
+    }
+
+    to {
+        background-size: 110%;
+    }
+}
+ 
+
+/* =========================
+   SECTION ESPACES
+========================= */
+
+.espaces {
+    padding: 100px 6%;
+    background-color: #faf8f5;
+    text-align: center;
+}
+
+.section-title h2 {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 40px;
+    color: rgb(169, 139, 96);
+    margin-bottom: 10px;
+}
+
+.section-title p {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 50px;
+}
+
+.espaces-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+.espace-card {
+    position: relative;
+    height: 260px;
+    border-radius: 14px;
+    overflow: hidden;
+    cursor: pointer;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+    transition: transform 0.4s ease;
+}
+
+.espace-card:hover {
+    transform: translateY(-6px);
+}
+
+.espace-images {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    height: 100%;
+    gap: 2px;
+}
+
+.espace-images img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.5s ease;
+}
+
+.espace-card:hover .espace-images img {
+    transform: scale(1.08);
+}
+
+.espace-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 18px 20px;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.75), transparent);
+    text-align: left;
+    color: white;
+}
+
+.espace-overlay h3 {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 22px;
+    margin-bottom: 4px;
+}
+
+.espace-overlay span {
+    font-size: 13px;
+    color: rgb(220, 200, 170);
+    border-bottom: 1px solid rgb(169, 139, 96);
+    padding-bottom: 2px;
+}
+
+/* =========================
+   LIGHTBOX / GALERIE
+========================= */
+
+.lightbox {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.93);
+    z-index: 1000;
+    align-items: center;
+    justify-content: center;
+}
+
+.lightbox.active {
+    display: flex;
+}
+
+.lightbox-content {
+    max-width: 85%;
+    max-height: 85vh;
+    text-align: center;
+    animation: fadeZoom 0.3s ease;
+}
+
+.lightbox-content img {
+    max-width: 100%;
+    max-height: 70vh;
+    border-radius: 8px;
+    object-fit: contain;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+.lightbox-title {
+    color: rgb(220, 200, 170);
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    margin-top: 15px;
+    font-size: 22px;
+}
+
+.lightbox-counter {
+    color: #ccc;
+    font-size: 14px;
+    margin-top: 8px;
+}
+
+.lightbox-close,
+.lightbox-prev,
+.lightbox-next {
+    position: absolute;
+    background: transparent;
+    border: 1px solid rgb(169, 139, 96);
+    color: white;
+    cursor: pointer;
+    border-radius: 50%;
+    width: 45px;
+    height: 45px;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.3s;
+}
+
+.lightbox-close:hover,
+.lightbox-prev:hover,
+.lightbox-next:hover {
+    background-color: rgb(169, 139, 96);
+    color: #000;
+}
+
+.lightbox-close {
+    top: 25px;
+    right: 25px;
+}
+
+.lightbox-prev {
+    left: 25px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.lightbox-next {
+    right: 25px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+@keyframes fadeZoom {
+    from { opacity: 0; transform: scale(0.92); }
+    to   { opacity: 1; transform: scale(1); }
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 768px) {
+    .espaces {
+        padding: 60px 5%;
+    }
+
+    .espace-card {
+        height: 220px;
+    }
+
+    .lightbox-prev,
+    .lightbox-next {
+        width: 38px;
+        height: 38px;
+        font-size: 16px;
+    }
+
+    .lightbox-close {
+        top: 15px;
+        right: 15px;
+    }
+
+    .lightbox-prev {
+        left: 10px;
+    }
+
+    .lightbox-next {
+        right: 10px;
+    }
+}

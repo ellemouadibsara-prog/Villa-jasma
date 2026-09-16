@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Villa Serena</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- En-tête -->
+    <header class="header">
+
+       <a href="#" class="logo">
+    <img src="img/I1.jpg" alt="Villa Jasma">
+</a>
+
+        <nav class="navbar">
+            <a href="#accueil">Accueil</a>
+            <a href="#villa">La Villa</a>
+            <a href="#galerie">Galerie</a>
+            <a href="#localisation">Localisation</a>
+            <a href="#contact">Contact</a>
+        </nav>
+
+        <a href="#reservation" class="booking-btn">
+            Réserver
+        </a>
+
+    </header>
+
+
+    <!-- Page d'accueil -->
+    <main>
+
+        <section class="hero" id="accueil">
+
+            <div class="hero-overlay"></div>
+
+            <div class="hero-content">
+
+                <p class="welcome">Bienvenue à</p>
+
+                <div class="dev"><h1>Villa Jasma</h1></div>
+
+                <p class="subtitle">
+                    Votre séjour privé, toute l'année.
+                </p>
+
+                <a href="#reservation" class="hero-btn">
+                    Réserver maintenant
+                </a>
+
+            </div>
+
+        </section>
+
+      
+<!-- Section Espaces -->
+<section class="espaces" id="villa">
+
+    <div class="section-title">
+        <h2>Découvrez la Villa</h2>
+        <p>Explorez chaque espace en images</p>
+    </div>
+
+    <div class="espaces-grid">
+
+        <div class="espace-card" data-espace="chambre">
+            <div class="espace-images">
+                <img src="img/6455aac8-6920-47cc-ab42-c5f237dfb2a8.jpg" alt="Chambre">
+                <img src="img/feb2ce62-d9b4-4685-8f8c-3428c88cacdd.jpg" alt="Chambre">
+            </div>
+            <div class="espace-overlay">
+                <h3>Chambre</h3>
+                <span>Voir la galerie</span>
+            </div>
+        </div>
+
+        <!-- غادي تزاد هنا bqiya des cartes (Cuisine, Salon...) mnbaad -->
+          <div class="espace-card" data-espace="salon">
+            <div class="espace-images">
+                <img src="img/95db0414-fab3-4478-9ff0-03df1810d2f8.jpg" alt="salon">
+                <img src="img/130000e7-601a-44db-865f-ab760ce9ad87.jpg" alt="salon">
+            </div>
+            <div class="espace-overlay">
+                <h3>Le salon</h3>
+                <span>Voir la galerie</span>
+            </div>
+        </div>
+   <div class="espace-card" data-espace="coin salon">
+            <div class="espace-images">
+                <img src="img/80d84010-4761-4ece-9697-ea259375bb4e.jpg" alt=" coin salon">
+                <img src="img/82a1d6f3-4c87-483f-b87f-271c256cd6db.jpg" alt="coin salon">
+            </div>
+            <div class="espace-overlay">
+                <h3>Le coin salon</h3>
+                <span>Voir la galerie</span>
+            </div>
+        </div>
+    </div>
+
+</section>
+
+<!-- Lightbox / Galerie -->
+<div class="lightbox" id="lightbox">
+    <button class="lightbox-close" id="lightboxClose">&times;</button>
+    <button class="lightbox-prev" id="lightboxPrev">&#10094;</button>
+
+    <div class="lightbox-content">
+        <img src="" alt="" id="lightboxImage">
+        <p class="lightbox-counter" id="lightboxCounter"></p>
+        <h3 class="lightbox-title" id="lightboxTitle"></h3>
+    </div>
+
+    <button class="lightbox-next" id="lightboxNext">&#10095;</button>
+</div>
+    </main>
+
+
+    <script src="scripte.js"></script>
+
+</body>
+
+</html>
